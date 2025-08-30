@@ -45,14 +45,14 @@ def main():
     # 分片推送模式（默认）
     content1, content2 = split_content(news_content)
     
-    #if content1 or content2:
+    if content1 or content2:
         # 分片推送
-        #send_notification("🌍 每天60s读懂世界 [1/2]", content1 + "\n\n")
-        #if content2:
-         #   send_notification("🌍 每天60s读懂世界 [2/2]", content2)
+        send_notification("🌍 每天60s读懂世界 [1/2]", content1 + "\n\n")
+        if content2:
+            send_notification("🌍 每天60s读懂世界 [2/2]", content2)
     
     # 整段推送模式（需要时取消下方注释）
-     send_notification("🌍 每天60s读懂世界", news_content)
+     #send_notification("🌍 每天60s读懂世界", news_content)
 
 if __name__ == "__main__":
     main()
